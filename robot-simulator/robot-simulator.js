@@ -96,7 +96,7 @@ function modifyBearing(bearing, direction) {
         return i === 0 ? bearings[bearings.length - 1] : bearings[i - 1];
     }
     if (direction === 'R') {
-        return i === bearings.length - 1 ? bearings[0] : bearings[i + 1];
+        return bearings[(i + 1) % 4];
     }
 }
 
